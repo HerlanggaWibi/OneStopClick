@@ -15,6 +15,11 @@ class LoginScreen: UIViewController {
     @IBOutlet weak var passWord: UITextField!
     
     @IBOutlet weak var signInButton: UIButton!
+    
+    @IBOutlet weak var signUp: UIButton!
+    
+    @IBOutlet weak var background: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +27,8 @@ class LoginScreen: UIViewController {
         userName.beautifulTextField()
         passWord.beautifulTextField()
         signInButton.beautifulButton()
+        signUp.beautifulButton()
+        //background.beautifulBG()
     }
     
 
@@ -45,6 +52,9 @@ extension UITextField {
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
+        //To apply background
+        self.layer.backgroundColor = UIColor.white.cgColor
+        
     }
 }
 
@@ -59,5 +69,11 @@ extension UIButton {
         self.layer.shadowOpacity = 0.5
         self.layer.shadowRadius = 4
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
+}
+
+extension UIImageView {
+    func beautifulBG() {
+        self.layer.opacity = 10
     }
 }
