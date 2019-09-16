@@ -22,13 +22,15 @@ class LoginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupUI()
+    }
+    
+    func setupUI() {
         userName.beautifulTextField()
         passWord.beautifulTextField()
         signInButton.beautifulButton()
         signUp.beautifulButton()
-        //background.beautifulBG()
     }
     
 
