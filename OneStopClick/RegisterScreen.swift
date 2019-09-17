@@ -50,30 +50,18 @@ class RegisterScreen: UIViewController {
                     alert.showError(error as! String, subTitle: "d")
                 }
                 else {
-                    let email = authResult?.user.email
-                    let uid = authResult?.user.uid
                     
-                    //UserDefault
-                    UserDefaults.standard.setValue(uid, forKey: "uid")
-                    UserDefaults.standard.setValue(email, forKey: "email")
+                    //let userName = self.fullName.text
+                    
                     
                     //Alert
                     DispatchQueue.main.async {
-                        alert.showSuccess("Success", subTitle: "aa")
+                        ProgressHUD.showSuccess("Registered", interaction: true)
                     }
-                    
-                    
-                    
-            
-                    
-                    
-                    
-                    
-                    
                     
                 }
                 //Go to login page
-                self.performSegue(withIdentifier: "login", sender: self)
+                self.performSegue(withIdentifier: "Login", sender: self)
             }
             
         }

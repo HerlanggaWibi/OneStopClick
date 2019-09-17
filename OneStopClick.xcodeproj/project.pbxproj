@@ -15,6 +15,9 @@
 		0F41A012232F37EA00E633B7 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41A011232F37EA00E633B7 /* RegisterScreen.swift */; };
 		0F41A014232F3F2200E633B7 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41A013232F3F2200E633B7 /* ForgotPasswordScreen.swift */; };
 		0F41A016232F465D00E633B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F41A015232F465D00E633B7 /* GoogleService-Info.plist */; };
+		0FD644FC23307B9900BF15B7 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD644F923307B9800BF15B7 /* ProgressHUD.m */; };
+		0FD644FD23307B9900BF15B7 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FD644FA23307B9900BF15B7 /* ProgressHUD.bundle */; };
+		0FD644FF2330885E00BF15B7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD644FE2330885E00BF15B7 /* HomeScreen.swift */; };
 		35E95604ACAF537F11EE2643 /* Pods_OneStopClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A20A541E5D4269C4234E60 /* Pods_OneStopClick.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,11 @@
 		0F41A011232F37EA00E633B7 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		0F41A013232F3F2200E633B7 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		0F41A015232F465D00E633B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FD644F823307B9700BF15B7 /* OneStopClick-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneStopClick-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FD644F923307B9800BF15B7 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		0FD644FA23307B9900BF15B7 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		0FD644FB23307B9900BF15B7 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		0FD644FE2330885E00BF15B7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		2162DFB6052474934B08F67D /* Pods-OneStopClick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneStopClick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneStopClick/Pods-OneStopClick.debug.xcconfig"; sourceTree = "<group>"; };
 		29A20A541E5D4269C4234E60 /* Pods_OneStopClick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneStopClick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3F5116F66698DBFFC210A9 /* Pods-OneStopClick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneStopClick.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneStopClick/Pods-OneStopClick.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 		0F126181232CFC2900D94F5C /* OneStopClick */ = {
 			isa = PBXGroup;
 			children = (
+				0FD644F723307B8400BF15B7 /* ProgressHUD */,
 				0F126182232CFC2900D94F5C /* AppDelegate.swift */,
 				0F126186232CFC2900D94F5C /* Main.storyboard */,
 				0F126189232CFC2C00D94F5C /* Assets.xcassets */,
@@ -74,10 +83,22 @@
 				0F12618E232CFC2C00D94F5C /* Info.plist */,
 				0F41A015232F465D00E633B7 /* GoogleService-Info.plist */,
 				0F126194232D091900D94F5C /* LoginScreen.swift */,
+				0FD644FE2330885E00BF15B7 /* HomeScreen.swift */,
 				0F41A013232F3F2200E633B7 /* ForgotPasswordScreen.swift */,
 				0F41A011232F37EA00E633B7 /* RegisterScreen.swift */,
 			);
 			path = OneStopClick;
+			sourceTree = "<group>";
+		};
+		0FD644F723307B8400BF15B7 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0FD644FA23307B9900BF15B7 /* ProgressHUD.bundle */,
+				0FD644FB23307B9900BF15B7 /* ProgressHUD.h */,
+				0FD644F923307B9800BF15B7 /* ProgressHUD.m */,
+				0FD644F823307B9700BF15B7 /* OneStopClick-Bridging-Header.h */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		72C79F636EAC80C24F566642 /* Pods */ = {
@@ -109,6 +130,7 @@
 				0F12617C232CFC2900D94F5C /* Frameworks */,
 				0F12617D232CFC2900D94F5C /* Resources */,
 				96D8E4816184D852A492E6F3 /* [CP] Embed Pods Frameworks */,
+				8A0AAAD60CDC91FADA5B233B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +153,7 @@
 				TargetAttributes = {
 					0F12617E232CFC2900D94F5C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -160,6 +183,7 @@
 				0F12618D232CFC2C00D94F5C /* LaunchScreen.storyboard in Resources */,
 				0F41A016232F465D00E633B7 /* GoogleService-Info.plist in Resources */,
 				0F12618A232CFC2C00D94F5C /* Assets.xcassets in Resources */,
+				0FD644FD23307B9900BF15B7 /* ProgressHUD.bundle in Resources */,
 				0F126188232CFC2900D94F5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +191,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8A0AAAD60CDC91FADA5B233B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OneStopClick/Pods-OneStopClick-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneStopClick/Pods-OneStopClick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		96D8E4816184D852A492E6F3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +216,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OneStopClick/Pods-OneStopClick-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
@@ -181,6 +229,12 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
@@ -218,7 +272,9 @@
 			files = (
 				0F41A012232F37EA00E633B7 /* RegisterScreen.swift in Sources */,
 				0F41A014232F3F2200E633B7 /* ForgotPasswordScreen.swift in Sources */,
+				0FD644FC23307B9900BF15B7 /* ProgressHUD.m in Sources */,
 				0F126183232CFC2900D94F5C /* AppDelegate.swift in Sources */,
+				0FD644FF2330885E00BF15B7 /* HomeScreen.swift in Sources */,
 				0F126195232D091900D94F5C /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +422,7 @@
 			baseConfigurationReference = 2162DFB6052474934B08F67D /* Pods-OneStopClick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OneStopClick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,6 +431,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WB.OneStopClick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneStopClick/ProgressHUD/OneStopClick-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +443,7 @@
 			baseConfigurationReference = FD3F5116F66698DBFFC210A9 /* Pods-OneStopClick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OneStopClick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -392,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WB.OneStopClick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneStopClick/ProgressHUD/OneStopClick-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
