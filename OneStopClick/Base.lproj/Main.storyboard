@@ -124,19 +124,21 @@
                                     <constraint firstAttribute="height" constant="29" id="jyW-8v-kzR"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9W-5A-ZVb" customClass="FBSDKLoginButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysx-2A-F4G">
                                 <rect key="frame" x="16" y="558" width="343" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="jdD-i7-Yr5"/>
+                                    <constraint firstAttribute="height" constant="29" id="R6Q-3R-c46"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHJ-zs-X4G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="H9W-5A-ZVb" secondAttribute="trailing" constant="16" id="47M-hr-8ag"/>
+                            <constraint firstItem="Ysx-2A-F4G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="12N-cj-L3W"/>
                             <constraint firstAttribute="bottom" secondItem="3en-HV-ZOH" secondAttribute="bottom" constant="28" id="4GM-fC-4Nj"/>
-                            <constraint firstItem="H9W-5A-ZVb" firstAttribute="top" secondItem="n1T-xf-Hb2" secondAttribute="bottom" constant="8" id="5K0-aH-KxC"/>
                             <constraint firstItem="zwt-Mr-kCV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8jI-O0-wXc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rn4-GI-S0A" secondAttribute="trailing" constant="16" id="8ml-St-OYZ"/>
                             <constraint firstItem="EjK-DR-OzN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="B8j-vX-XGT"/>
@@ -146,6 +148,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1F3-6w-cgm" secondAttribute="trailing" constant="16" id="J3Z-Jg-4Ka"/>
                             <constraint firstItem="zwt-Mr-kCV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JJV-lx-Ynm"/>
                             <constraint firstItem="n1T-xf-Hb2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="JU7-Sd-KJ0"/>
+                            <constraint firstItem="Ysx-2A-F4G" firstAttribute="top" secondItem="n1T-xf-Hb2" secondAttribute="bottom" constant="8" id="JYe-hz-pBr"/>
                             <constraint firstItem="Vwc-r1-YrN" firstAttribute="top" secondItem="rn4-GI-S0A" secondAttribute="bottom" constant="28" id="JdC-uK-bkZ"/>
                             <constraint firstItem="rn4-GI-S0A" firstAttribute="top" secondItem="T86-2M-NoQ" secondAttribute="bottom" constant="20" id="Kk4-45-cM4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vwc-r1-YrN" secondAttribute="trailing" constant="16" id="O16-Hd-g8o"/>
@@ -162,11 +165,11 @@
                             <constraint firstAttribute="trailing" secondItem="cZm-wR-dBi" secondAttribute="trailing" constant="16" id="p7u-2E-rwq"/>
                             <constraint firstItem="1F3-6w-cgm" firstAttribute="top" secondItem="Vwc-r1-YrN" secondAttribute="bottom" constant="8" id="p9y-AZ-g9I"/>
                             <constraint firstAttribute="trailing" secondItem="T86-2M-NoQ" secondAttribute="trailing" constant="16" id="ufY-T7-1RY"/>
-                            <constraint firstItem="H9W-5A-ZVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="xIg-HY-NDW"/>
                             <constraint firstItem="Vwc-r1-YrN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xNJ-w5-7hB"/>
                             <constraint firstItem="rn4-GI-S0A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xk6-sX-Jfp"/>
                             <constraint firstItem="n1T-xf-Hb2" firstAttribute="top" secondItem="1F3-6w-cgm" secondAttribute="bottom" constant="22" id="xng-7g-SJ8"/>
                             <constraint firstItem="T86-2M-NoQ" firstAttribute="top" secondItem="lhh-4y-MhA" secondAttribute="bottom" constant="26" id="yCj-ds-RRS"/>
+                            <constraint firstAttribute="trailing" secondItem="Ysx-2A-F4G" secondAttribute="trailing" constant="16" id="yZs-DR-paA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

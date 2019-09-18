@@ -13,32 +13,10 @@ import GoogleSignIn
 import FBSDKCoreKit
 import FacebookLogin
 
-class LoginScreen: UIViewController, LoginButtonDelegate {
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-            if let error = error {
-                // ...
-                return
-            }
-            // User is signed in
-            // ...
-            let result1 = authResult?.user.displayName
-            let result2 = authResult?.user.email
-            let result3 = authResult?.user.uid
-            
-            print("result1: \(String(describing: result1))")
-            print("result2: \(String(describing: result2))")
-            print("result3: \(String(describing: result3))")
-        }
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        
-    }
-    
 
+class LoginScreen: UIViewController {
+    
+    
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var passWord: UITextField!
@@ -61,7 +39,7 @@ class LoginScreen: UIViewController, LoginButtonDelegate {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
         //FB
-        let loginButton = FBLoginButton(permissions: [ .publicProfile ])
+        let loginButton = FBLoginButton(permissions: [ .publicProfile, .email ])
         loginButton.delegate = self
         
     }
@@ -112,7 +90,44 @@ class LoginScreen: UIViewController, LoginButtonDelegate {
                     }
                 }
             }
+    
+    func signIntoFirebase() {
+        guard let token = AccessToken.current?.tokenString else {  return  }
+        let credential = FacebookAuthProvider.credential(withAccessToken: token)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            let result1 = user?.user.email
+            let result2 = user?.user.displayName
+            let result3 = user?.user.uid
+            
+            print(result1)
+            print(result2)
+            print(result3)
         }
+    }
+    
+    
+    @IBAction func facebookLogin(_ sender: UIButton) {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: [.publicProfile, .email], viewController: self) { (result) in
+            switch result {
+                
+            case .success(let granted, let declined, let token):
+                print("RESULT")
+                print(granted)
+                print(declined)
+                print(token)
+                self.signIntoFirebase()
+            case .cancelled:
+                print("Cancel")
+            case .failed(_):
+                print("FAILED")
+            }
+        }
+    }
+    
+    
+
+} //Penutup Class
         
     
 extension LoginScreen: GIDSignInDelegate {
@@ -129,6 +144,19 @@ extension LoginScreen: GIDSignInDelegate {
         
         self.performSegue(withIdentifier: "Home", sender: self)
     }
+}
+
+extension LoginScreen: LoginButtonDelegate {
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("berhasil Logout")
+    }
+    
+    
 }
 
 
