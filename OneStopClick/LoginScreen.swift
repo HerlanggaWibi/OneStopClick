@@ -95,13 +95,19 @@ class LoginScreen: UIViewController {
         guard let token = AccessToken.current?.tokenString else {  return  }
         let credential = FacebookAuthProvider.credential(withAccessToken: token)
         Auth.auth().signIn(with: credential) { (user, error) in
-            let result1 = user?.user.email
+            let email = user?.user.email
             let result2 = user?.user.displayName
-            let result3 = user?.user.uid
+            let token = user?.user.uid
             
-            print(result1)
-            print(result2)
-            print(result3)
+            let userDefault = UserDefaults.standard
+            
+            userDefault.set(email, forKey: "email")
+            userDefault.set(token, forKey: "token")
+            
+            DispatchQueue.main.async {
+                ProgressHUD.showSuccess()
+                self.performSegue(withIdentifier: "Home", sender: self)
+            }
         }
     }
     
@@ -134,6 +140,11 @@ extension LoginScreen: GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
+        if let err = error {
+            print("error: \(err)")
+            self.dismiss(animated: true, completion: nil)
+        }
+        else {
         let emailGet = user.profile.email
         let userID = user.userID
         let name = user.profile.name
@@ -143,6 +154,7 @@ extension LoginScreen: GIDSignInDelegate {
         userDefault.set(name, forKey: "name")
         
         self.performSegue(withIdentifier: "Home", sender: self)
+        }
     }
 }
 

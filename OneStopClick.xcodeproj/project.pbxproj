@@ -15,6 +15,7 @@
 		0F41A012232F37EA00E633B7 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41A011232F37EA00E633B7 /* RegisterScreen.swift */; };
 		0F41A014232F3F2200E633B7 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41A013232F3F2200E633B7 /* ForgotPasswordScreen.swift */; };
 		0F41A016232F465D00E633B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F41A015232F465D00E633B7 /* GoogleService-Info.plist */; };
+		0FC9941D233365A50051A284 /* Beranda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9941C233365A50051A284 /* Beranda.swift */; };
 		0FD644FC23307B9900BF15B7 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD644F923307B9800BF15B7 /* ProgressHUD.m */; };
 		0FD644FD23307B9900BF15B7 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FD644FA23307B9900BF15B7 /* ProgressHUD.bundle */; };
 		0FD644FF2330885E00BF15B7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD644FE2330885E00BF15B7 /* HomeScreen.swift */; };
@@ -32,6 +33,7 @@
 		0F41A011232F37EA00E633B7 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		0F41A013232F3F2200E633B7 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		0F41A015232F465D00E633B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FC9941C233365A50051A284 /* Beranda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beranda.swift; sourceTree = "<group>"; };
 		0FD644F823307B9700BF15B7 /* OneStopClick-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneStopClick-Bridging-Header.h"; sourceTree = "<group>"; };
 		0FD644F923307B9800BF15B7 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		0FD644FA23307B9900BF15B7 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				0F41A015232F465D00E633B7 /* GoogleService-Info.plist */,
 				0F126194232D091900D94F5C /* LoginScreen.swift */,
 				0FD644FE2330885E00BF15B7 /* HomeScreen.swift */,
+				0FC9941C233365A50051A284 /* Beranda.swift */,
 				0F41A013232F3F2200E633B7 /* ForgotPasswordScreen.swift */,
 				0F41A011232F37EA00E633B7 /* RegisterScreen.swift */,
 			);
@@ -275,6 +278,7 @@
 				0FD644FC23307B9900BF15B7 /* ProgressHUD.m in Sources */,
 				0F126183232CFC2900D94F5C /* AppDelegate.swift in Sources */,
 				0FD644FF2330885E00BF15B7 /* HomeScreen.swift in Sources */,
+				0FC9941D233365A50051A284 /* Beranda.swift in Sources */,
 				0F126195232D091900D94F5C /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

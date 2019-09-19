@@ -41,11 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        if url.absoluteString == "com.googleusercontent.apps.1024084815287-t3596tgqfg6c6f9l9tq1u4nb5f1b0p6q" {
-//            return GIDSignIn.sharedInstance().handle(url)
-//        }
+//         url.absoluteString == "com.googleusercontent.apps.1024084815287-t3596tgqfg6c6f9l9tq1u4nb5f1b0p6q" {
+            return GIDSignIn.sharedInstance().handle(url)
         
-        return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        
+//        return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         
     }
     
