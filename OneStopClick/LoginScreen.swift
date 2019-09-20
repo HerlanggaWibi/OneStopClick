@@ -44,6 +44,10 @@ class LoginScreen: UIViewController {
         
     }
     
+    @IBAction func dismissView(_ sender: UITapGestureRecognizer) {
+        email.resignFirstResponder()
+        passWord.resignFirstResponder()
+    }
     func setupUI() {
         email.beautifulTextField()
         passWord.beautifulTextField()
