@@ -8,8 +8,8 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FBSDKLoginKit'
-pod 'FacebookLogin'
-pod 'FacebookCore'
+#pod 'FacebookLogin'
+#pod 'FacebookCore'
 pod 'SCLAlertView'
 
   # Pods for OneStopClick

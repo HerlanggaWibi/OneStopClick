@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dOO-da-sRc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -246,10 +246,59 @@
                     <view key="view" contentMode="scaleToFill" id="3Gd-Fd-5vi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kwy-Rg-QgU">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="MWH-d9-dfH" customClass="PinterestLayout" customModule="OneStopClick" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="VxV-KM-pBC" customClass="BerandaCell" customModule="OneStopClick" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-CO-iJg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="337" height="274"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gPM-CO-iJg" firstAttribute="leading" secondItem="VxV-KM-pBC" secondAttribute="leading" id="9RA-eD-Mxg"/>
+                                            <constraint firstAttribute="bottom" secondItem="gPM-CO-iJg" secondAttribute="bottom" id="9zy-XY-RAY"/>
+                                            <constraint firstAttribute="trailing" secondItem="gPM-CO-iJg" secondAttribute="trailing" id="Z6H-NM-Dq8"/>
+                                            <constraint firstItem="gPM-CO-iJg" firstAttribute="top" secondItem="VxV-KM-pBC" secondAttribute="top" id="xXo-Gl-y0K"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="imageProduct" destination="gPM-CO-iJg" id="14F-LI-HaC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="lUF-bQ-0Ev" id="rPP-yZ-k7s"/>
+                                    <outlet property="delegate" destination="lUF-bQ-0Ev" id="DF2-CC-6AM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kwy-Rg-QgU" firstAttribute="leading" secondItem="INZ-Si-gpI" secondAttribute="leading" id="Cyo-IH-Bka"/>
+                            <constraint firstItem="Kwy-Rg-QgU" firstAttribute="bottom" secondItem="INZ-Si-gpI" secondAttribute="bottom" id="EwP-Rh-fhY"/>
+                            <constraint firstItem="Kwy-Rg-QgU" firstAttribute="trailing" secondItem="INZ-Si-gpI" secondAttribute="trailing" id="Qjh-9u-IDc"/>
+                            <constraint firstItem="Kwy-Rg-QgU" firstAttribute="top" secondItem="INZ-Si-gpI" secondAttribute="top" id="WwA-Tr-LJm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="INZ-Si-gpI"/>
                     </view>
                     <navigationItem key="navigationItem" title="1StopClick" id="NAR-3b-he7"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Kwy-Rg-QgU" id="RpI-hi-fGY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="De1-3R-fqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,13 +10,24 @@ import UIKit
 
 class Beranda: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    let images2 = ["kemeja1.jpg", "kemeja2.jpg", "kemeja3.jpg", "kemeja4.jpg", "kemeja5.jpg", "kemeja6.jpg", "kemeja7.jpg", "kemeja8.jpg"]
+    
+    let images = [#imageLiteral(resourceName: "kemeja7"), #imageLiteral(resourceName: "kemeja8"), #imageLiteral(resourceName: "kemeja6"), #imageLiteral(resourceName: "kemeja1"), #imageLiteral(resourceName: "kemeja3"), #imageLiteral(resourceName: "kemeja5"), #imageLiteral(resourceName: "kemeja2"), #imageLiteral(resourceName: "kemeja4")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         deleteToken()
         configNavBar_UI()
         search.delegate = self
+        
+        if let layout = collectionView.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
+        
+        // untuk batas setiap item
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     func deleteToken() {
@@ -79,3 +90,46 @@ extension Beranda: UISearchBarDelegate {
         print(search.text)
     }
 }
+
+extension Beranda: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BerandaCell
+        
+        let image = images[indexPath.item]
+        cell.imageProduct.image = image
+        
+        return cell
+    }
+    
+}
+
+extension Beranda:  PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let image = images[indexPath.item]
+        let height = image.size.height
+        
+        return height
+    }
+    
+    
+}
+
+
+// Flow Layout delegate
+//extension Beranda: UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        let width = collectionView.frame.size.width
+//        let numberOfColumn: CGFloat = 2
+//        let cellSpacing: CGFloat = 5
+//        let xInset: CGFloat = 10
+//
+//        return CGSize(width: (width / numberOfColumn) - (xInset + cellSpacing), height: (width / numberOfColumn) - (xInset + cellSpacing))
+//    }
+
+// }

@@ -11,7 +11,6 @@ import Firebase
 import SCLAlertView
 import GoogleSignIn
 import FBSDKCoreKit
-import FacebookLogin
 
 
 class LoginScreen: UIViewController {
@@ -39,8 +38,8 @@ class LoginScreen: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
         //FB
-        let loginButton = FBLoginButton(permissions: [ .publicProfile, .email ])
-        loginButton.delegate = self
+//        let loginButton = FBLoginButton(permissions: [ .publicProfile, .email ])
+//        loginButton.delegate = self
         
     }
     
@@ -116,24 +115,24 @@ class LoginScreen: UIViewController {
     }
     
     
-    @IBAction func facebookLogin(_ sender: UIButton) {
-        let loginManager = LoginManager()
-        loginManager.logIn(permissions: [.publicProfile, .email], viewController: self) { (result) in
-            switch result {
-                
-            case .success(let granted, let declined, let token):
-                print("RESULT")
-                print(granted)
-                print(declined)
-                print(token)
-                self.signIntoFirebase()
-            case .cancelled:
-                print("Cancel")
-            case .failed(_):
-                print("FAILED")
-            }
-        }
-    }
+//    @IBAction func facebookLogin(_ sender: UIButton) {
+//        let loginManager = LoginManager()
+//        loginManager.logIn(permissions: [.publicProfile, .email], viewController: self) { (result) in
+//            switch result {
+//
+//            case .success(let granted, let declined, let token):
+//                print("RESULT")
+//                print(granted)
+//                print(declined)
+//                print(token)
+//                self.signIntoFirebase()
+//            case .cancelled:
+//                print("Cancel")
+//            case .failed(_):
+//                print("FAILED")
+//            }
+//        }
+//    }
     
     
 
@@ -162,18 +161,18 @@ extension LoginScreen: GIDSignInDelegate {
     }
 }
 
-extension LoginScreen: LoginButtonDelegate {
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        print("berhasil Logout")
-    }
-    
-    
-}
+//extension LoginScreen: LoginButtonDelegate {
+//
+//    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+//
+//    }
+//
+//    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+//        print("berhasil Logout")
+//    }
+//
+//
+//}
 
 
 extension UITextField {
